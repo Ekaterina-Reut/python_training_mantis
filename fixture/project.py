@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from model.project import Project
 
+
 class ProjectHelper:
 
     def __init__(self, app):
