@@ -19,14 +19,14 @@ class Application:
         else:
             raise ValueError("Unrecognized browser %s" % browser)
         self.wd.implicitly_wait(1)
+        self.config = config
+        self.base_url = config['web']['baseUrl']
         self.session = SessionHelper(self)
         self.project = ProjectHelper(self)
         self.james = JamesHelper(self)
         self.signup = SignupHelper(self)
         self.mail = MailHelper(self)
         self.soap = SoapHelper(self)
-        self.config = config
-        self.base_url = config['web']['baseUrl']
 
 
     # Auxiliary
